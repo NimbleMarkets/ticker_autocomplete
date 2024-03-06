@@ -1,0 +1,45 @@
+version: '3'
+
+tasks:
+  default:
+    desc: 'Default task is "build"'
+    deps:
+      - build
+
+  list:
+    desc: 'Lists available tasks'
+    cmds:
+      - task --list-all
+
+  build:
+    desc: 'Build all'
+    deps:
+      - you-tickercomplete-me
+
+###############################################################################
+
+  go-tidy:
+    desc: 'Tidy all'
+    cmds:
+      - go mod tidy
+
+  go-update:
+    desc: 'Update Go dependencies'
+    cmds:
+      - go get -u ./...
+
+  clean:
+    desc: 'Clean'
+    cmds:
+      - rm -f bin/ticker-autocomplete-server bin/you-tickercomplete-me
+
+  you-tickercomplete-me:
+    desc: 'Build you-tickercomplete-me'
+    deps: [go-tidy]
+    cmds:
+      - go build -o bin/you-tickercomplete-me cmd/you-tickercomplete-me/*.go
+    sources:
+      - cmd/you-tickercomplete-me/*.go
+      - '**/*.go'
+    generates:
+      - bin/you-tickercomplete-me
