@@ -1,6 +1,6 @@
 module github.com/NimbleMarkets/ticker_autocomplete
 
-go 1.22
+go 1.22.1
 
 require (
 	github.com/Vivino/go-autocomplete-trie v0.0.0-20230301121706-da951497d081
