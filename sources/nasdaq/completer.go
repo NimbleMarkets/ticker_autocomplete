@@ -53,6 +53,10 @@ func NewCompleter() (*NasdaqCompleter, error) {
 	return completer, nil
 }
 
+func (c *NasdaqCompleter) GetAll() []tac.Completion {
+	return c.completions
+}
+
 // GetCompletions returns completions for the given prompt.
 func (c *NasdaqCompleter) GetCompletions(prompt string, limit int) []tac.Completion {
 	var results []tac.Completion
