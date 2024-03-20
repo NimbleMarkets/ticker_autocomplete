@@ -43,3 +43,21 @@ tasks:
       - '**/*.go'
     generates:
       - bin/you-tickercomplete-me
+
+###############################################################################
+
+  build-cassette:
+    desc: 'Build vhs cassette gifs'
+    deps: [build]
+    cmds:
+      - vhs --output tmp_ytcm.gif  etc/ytcm.cassette
+    generates:
+      - tmp_ytcm.gif
+
+  publish-cassette:
+    desc: 'Publish vhs cassette gifs to Charm'
+    deps: [build-cassette]
+    cmds:
+      - vhs publish tmp_ytcm.gif
+    sources:
+      - tmp_ytcm.gif

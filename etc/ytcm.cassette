@@ -1,0 +1,29 @@
+Set Shell zsh
+Sleep 500ms
+Type "./bin/you-tickercomplete-me"
+Sleep 1s
+Enter
+Sleep 1s
+Type "MSF"
+Sleep 500ms
+Type "T"
+Sleep 1.5s
+Backspace 3
+Sleep 500ms
+Backspace
+Type "IMMR"
+Backspace 4
+Type "Micros"
+Sleep 1s
+Backspace
+Sleep 500ms
+Type "o"
+Backspace
+Type "so"
+Sleep 2.5s
+Backspace
+Sleep 1.5s
+Type "tr"
+Sleep 1s
+Enter
+Sleep 3s
