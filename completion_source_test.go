@@ -96,3 +96,7 @@ func (c *MockCompleter) GetCompletions(prompt string, limit int) []Completion {
 
 	return results[:limit]
 }
+
+func (c *MockCompleter) GetAll() []Completion {
+	return c.Results
+}

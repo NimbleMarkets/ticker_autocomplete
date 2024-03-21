@@ -15,4 +15,5 @@ type Completion struct {
 type Completer interface {
 	// Returns all completions for the given prompt, up to the given limit (or all if limit < 0).
 	GetCompletions(prompt string, limit int) []Completion
+	GetAll() []Completion
 }
