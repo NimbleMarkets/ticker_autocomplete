@@ -53,6 +53,7 @@ func NewCompleter() (*NasdaqCompleter, error) {
 	return completer, nil
 }
 
+// GetAll returns all completions.
 func (c *NasdaqCompleter) GetAll() []tac.Completion {
 	return c.completions
 }
